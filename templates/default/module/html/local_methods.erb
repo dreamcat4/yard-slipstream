@@ -1,0 +1,10 @@
+<% scopes(localmethods) do |meths, scope| %>
+	<h3 class="inherited"><%= scope.to_s.capitalize %> Methods</h3>
+	    <ul id="methods_ribbon">
+	    <% n = 1 %>
+	    <% meths.each do |meth| %>
+	      <li class="r<%= n %>"><%= linkify(meth,meth.name) %></li>
+	      <% n = n == 2 ? 1 : 2 %>
+	    <% end %>
+	    </ul>
+<% end %>

@@ -1,0 +1,27 @@
+<div id="search2">
+  <% @yardoc_org = "http://yardoc.org" %>
+  <% @project = "yard" %>
+  <form class="search2" method="get" action="<%= @yardoc_org %>/search/<%= @project %>"> 
+    Search: <input name="q" type="search" placeholder="Search" id="search_box2" size="30" value="" /> 
+  </form> 
+  <script type="text/javascript" charset="utf-8"> 
+    $('#search_box2').autocomplete('<%= @yardoc_org %>/search/<%= @project %>', {
+      width: 340,
+      formatItem: function(item) {
+        var values = item[0].split(",");
+        return values[0] + (values[1] == '' ? "" : " <small>(" + values[1] + ")</small>");
+      }
+    }).result(function(event, item) {
+      var values = item[0].split(",")
+      $('#search_box2').val(values[1]);
+      location.href = values[3];
+      return false;
+    });
+  </script> 
+  <style> 
+    .frames form.search2 { position: absolute; right: 14px; top: -6px; padding-top: 10px; }
+    .frames #menu .noframes { float: none; }
+    .frames #menu { float: left; }
+    .frames #content h1 { margin-top: 15px; }
+  </style> 
+</div>
