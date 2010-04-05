@@ -60,7 +60,7 @@ def asset(path, content)
 end
 
 def generate_assets
-  %w( js/jquery.js js/app.js js/full_list.js js/live.js js/autocomplete.js 
+  %w( js/jquery.js js/app.js js/full_list.js js/autocomplete.js js/live.js 
       css/style.css css/custom.css css/full_list.css css/common.css ).each do |file|
     asset(file, file(file, true))
   end
@@ -82,6 +82,7 @@ def generate_method_list
 end
 
 def generate_class_list
+  @items = options[:objects]
   @list_title = "Class List"
   @list_type = "class"
   asset('class_list.html', erb(:full_list))
@@ -104,8 +105,7 @@ def class_list(root = Registry.root)
   out = ""
   children = run_verifier(root.children)
   if root == Registry.root
-    children += Registry.all(:class, :module).select {|o| o.namespace.is_a?(CodeObjects::Proxy) }
-    children = run_verifier(children)
+    children += @items.select {|o| o.namespace.is_a?(CodeObjects::Proxy) }
   end
   children.sort_by {|child| child.path }.map do |child|
     if child.is_a?(CodeObjects::NamespaceObject)

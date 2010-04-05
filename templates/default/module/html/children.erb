@@ -1,0 +1,14 @@
+<p class="children">
+  <% @inner.each do |name, list| %> 
+    <% if list.size > 0 %>
+			<h3 class="inherited"><%= name.to_s.capitalize %></h3>
+	    <ul id="<%= name %>_ribbon">
+	    <% n = 1 %>
+	    <% list.each do |child| %>
+	      <li class="r<%= n %>"><%= linkify(child,child.name) %></li>
+	      <% n = n == 2 ? 1 : 2 %>
+	    <% end %>
+	    </ul>
+    <% end %>
+  <% end %>
+</p>

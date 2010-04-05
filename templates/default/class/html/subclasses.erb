@@ -1,0 +1,10 @@
+<div id="subclasses">
+  <h3 class="inherited">Direct Known Subclasses</h3>
+  <ul id="classes_ribbon">
+  <% n = 1 %>
+  <% @subclasses.each do |name,child| %>
+    <li class="r<%= n %>"><%= linkify(child,name) %></li>
+    <% n = n == 2 ? 1 : 2 %>
+  <% end %>
+  </ul>
+</div>

@@ -16,7 +16,9 @@
 
   <h2>Namespace Listing A-Z</h2>
   
-   <ul class="toplevel"><li><%= linkify(Registry.root) %></li></ul>
+  <% if Registry.root.meths(:included => false).size > 0 %>
+    <ul class="toplevel" id="files_ribbon"><li class="r1"><%= linkify(Registry.root) %></li></ul>
+  <% end %>
 
   <% i = 0 %>
   <table>

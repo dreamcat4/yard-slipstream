@@ -2,8 +2,8 @@ include Helpers::ModuleHelper
 
 def init
   sections \
-    :box_info, 
     :header, 
+    :box_info, 
     :children, 
     :local_methods,
     :inherited_methods,
