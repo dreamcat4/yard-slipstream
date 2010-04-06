@@ -9,7 +9,7 @@ def init
     :inherited_methods,
     # :method_summary, [:item_summary], 
     :pre_docstring, T('docstring'), 
-    :constant_summary, :inherited_constants, 
+    :constant_summary, [T('docstring')], :inherited_constants, 
     :attribute_summary, [:item_summary], 
     :methodmissing, [T('method_details')],
     # :attribute_details, [T('method_details')], 
@@ -79,7 +79,7 @@ def sort_listing(list)
   list.sort_by {|o| [o.scope.to_s, o.name.to_s.downcase] }
 end
 
-def docstring_summary(obj)
+def docstring_full(obj)
   docstring = ""
   if obj.tags(:overload).size == 1 && obj.docstring.empty?
     docstring = obj.tag(:overload).docstring
@@ -91,7 +91,11 @@ def docstring_summary(obj)
     docstring = Docstring.new(obj.tag(:return).text.gsub(/\A([a-z])/) {|x| x.upcase }.strip)
   end
 
-  docstring.summary
+  docstring
+end
+
+def docstring_summary(obj)
+  docstring_full(obj).summary
 end
 
 def scopes(list)
