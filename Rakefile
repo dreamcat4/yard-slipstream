@@ -10,6 +10,7 @@ begin
     gem.email = "dreamcat4@gmail.com"
     gem.homepage = "http://github.com/dreamcat4/yard-slipstream"
     gem.authors = ["Dreamcat4"]
+    gem.add_dependency "json", ">= 0"
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "yard", ">= 0"
     gem.add_development_dependency "cucumber", ">= 0"

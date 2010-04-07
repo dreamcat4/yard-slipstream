@@ -1,15 +1,44 @@
 = yard-slipstream
 
-Description goes here.
+Hi there!
 
-== Note on Patches/Pull Requests
+yard-slipstream is a small-to-meduim facelift on the default yard template. Its aim is to make all the existing info presented by yard to be as clear and concise as possible. If you ever found yard documents a bit hard on you, well this should dials down the verbosity level for you. There are not really any new features in this template. Its just a cosmetic re-think and styleover for the existing yard template.
+
+== Note!
+
+* This template is compatible with yard version `0.5.4`. So for best results, install `yard 0.5.4` first. Otherwise, please be prepared that some things might be a little broken. Its not that bad though (at least at the moment when im writing this).
+
+* Sorry, but Yard-slipstream cant be used for docs hosted at yardoc.org because yardoc.org uses its own html customizations. Unfortunately, those particular customizations and yard-slipstream cant co-exist together for certain technical reasons. We tried. Still, this plugin is fully compatible with the default yard implementation. So the route to publish is: generate the docs locally, then push them up to github / gh-pages.
+
+== Usage
+
+    gem install yard-slipstream
+
+Then just generate with yard as per the nomal process. Use jeweler, its good for that.
+
+== So Whats different?
+
+* Neat blue Search box as per yardoc.org, placed top-right (not quite working, as of 05-Apr-2010)
+* The blue search box entirely replaces the 3 previous drop-down menus (Files List, Methods List, Class List), remember those?
+* New search backend engine to power the search box (again, sorry but not finished yet)
+* Better scrolling to the embedded pages links (yard issue-102)
+* Some page sections removed, or re-worked, less duplication of info
+* Some object and class links and object includes emphasized for better prominence
+* More rdoc-like method navigation (prominent method ribbon)
+* A couple of sections re-ordered to work better in the new layout
+
+== Whats the same?
+
+* Well, all the cool, good things about the original yard template!
+* Same basic fundamental layout. Which was good to begin with.
+* Same "Index" page
+* "Top Level Namespace" for exploring, its great! (accessible from the Index page)
+
+== Note on template compatibility
  
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* This is a plugin to change the asthetics, and therefore it depends heavily on overriding the default yard template.
+* The default yard template is a moving target, it changes on pretty much every new patch release.
+* If something is broken, please try to patch it and fix it. Its not as hard as it seems if you know a little ruby and html.
 * Send me a pull request. Bonus points for topic branches.
 
 == Copyright
