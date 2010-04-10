@@ -5,9 +5,23 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=<%= charset %>"/>
 	<title><%= options[:title] %></title>
+	<script language="JavaScript">
+		function frame_saver()
+		{
+			if (self.location.search)
+			{
+				parent.main.location = location.search.substring(1,location.search.length);
+			}
+			else
+			{
+				parent.main.location = "index.html";
+			}
+		}
+		window.onload = frame_saver;
+	</script>
 </head>
 <frameset cols="20%,*">
   <frame name="list" src="class_list.html" />
-  <frame name="main" src="index.html" />
+  <frame name="main" />
 </frameset>
 </html>

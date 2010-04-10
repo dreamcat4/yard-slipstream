@@ -90,7 +90,7 @@ function framesInit() {
     $('#noframes_link').removeClass('link_disabled');
   }
 	else {
-    $('#frames_link').attr('href', relpath+"frames.html");
+    $('#frames_link').attr('href', relpath+"frames.html?" + document.location);
     $('#frames_link').removeClass('link_disabled');
 	}
 }
