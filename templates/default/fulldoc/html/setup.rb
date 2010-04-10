@@ -109,6 +109,13 @@ def generate_json_search_index
     }
   end
 
+  @search_index << [
+    {
+      :text => "Top Level Namespace",
+      :href_tag => link_object(Registry.root, nil, nil, false)
+    }
+  ]
+
   @search_index << options[:objects].map do |o|
     {
       :text => o,

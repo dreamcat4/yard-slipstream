@@ -1,8 +1,8 @@
 <div id="search2">
   <% @yardoc_org = "http://yardoc.org" %>
   <% @project = "yard" %>
-  <form class="search2" method="get" action="<%= @yardoc_org %>/search/<%= @project %>"> 
-    Search: <input name="q" type="search" placeholder="Search" id="search_box2" size="30" value="" /> 
+  <form class="search2" onsubmit="return false;" action="">
+    <input name="q" type="search" placeholder="Search" id="search_box2" size="30" value="" />
   </form> 
   <script type="text/javascript" charset="utf-8"> 
     $('#search_box2').focus(function(){
@@ -11,7 +11,7 @@
 
       function go_data(adata) {
         $('#search_box2').autocomplete(adata, {
-          width: 340,
+          width: 305,
           matchContains: true,
           formatItem: function(item) {
             return item.text;
