@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{yard-slipstream}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dreamcat4"]
@@ -35,11 +35,10 @@ Gem::Specification.new do |s|
     "templates/default/class/html/subclasses.erb",
     "templates/default/fulldoc/html/css/custom.css",
     "templates/default/fulldoc/html/css/style.css",
-    "templates/default/fulldoc/html/css/yardoc-custom.css",
-    "templates/default/fulldoc/html/css/yardoc.css",
-    "templates/default/fulldoc/html/css/yardoc.html",
+    "templates/default/fulldoc/html/js/app.js",
     "templates/default/fulldoc/html/js/autocomplete.js",
     "templates/default/fulldoc/html/js/live.js",
+    "templates/default/fulldoc/html/json_search_index.erb",
     "templates/default/fulldoc/html/setup.rb",
     "templates/default/layout/html/breadcrumb.erb",
     "templates/default/layout/html/footer.erb",
