@@ -28,7 +28,7 @@
   -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px;
 }
 #info_box a.inactive { color: #999; }
-.frames #info_box { display: none; }
+/*.frames #info_box { display: none; }*/
 
 dl.box    { display: inline; }
 dl.box dt { clear: both; }
