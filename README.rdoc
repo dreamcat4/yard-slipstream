@@ -20,15 +20,15 @@ http://dreamcat4.github.com/plist4r/
 
 == Improvements
 
-* Same blue Search box as per yardoc.org, placed top-right
-* Blue search box entirely replaces the 3 previous drop-down menus (Files List, Methods List, Class List), remember those?
-* New search backend to power the search box (loads local file 'search_index.json')
+* Blue search box to replace 3 seperate drop-down menus (Files List, Methods List, Class List)
+* The blue Search box is similar as per yardoc.org, but positioned in top-right corner
+* New backend to power the search box (loads onfocus a local json file 'search_index.json')
+* New Frames | No Frames hyperlinks bar. Top right, next to search.
 * '_index.html' renamed to 'object_index.html' to avoid conflicts with jekyll / gh-pages
-* The above fix makes yard nestable within a gh-pages / jekyll website
-* Better scrolling to the embedded pages links (yard issue-102)
-* Some page sections removed, or re-worked, less duplication of info
-* Some object and class links and object includes emphasized for better prominence
-* More rdoc-like method navigation (prominent method ribbon)
+* The above fix allows yard docs to be nestable within gh-pages / jekyll website
+* Better scrolling to embedded page links (yard issue-102)
+* Certain object navigation links emphasized (easier to click on / better prominence)
+* More rdoc-like method navigation (via the method ribbons)
 * A couple of sections re-ordered to work better in the new layout
 
 == Whats left the same?
