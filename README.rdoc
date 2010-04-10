@@ -4,6 +4,10 @@ Small-to-meduim facelift on the default yard template. This yard plugin aims is 
 
 So go on, lets give yard a styleover.
 
+== Demo
+
+http://dreamcat4.github.com/plist4r/
+
 == Usage
 
     gem install yard-slipstream
