@@ -5,17 +5,21 @@
     Search: <input name="q" type="search" placeholder="Search" id="search_box2" size="30" value="" /> 
   </form> 
   <script type="text/javascript" charset="utf-8"> 
-    $('#search_box2').autocomplete('<%= @yardoc_org %>/search/<%= @project %>', {
-      width: 340,
-      formatItem: function(item) {
-        var values = item[0].split(",");
-        return values[0] + (values[1] == '' ? "" : " <small>(" + values[1] + ")</small>");
+    $('#search_box2').focus(function(){
+      var search_index = relpath + 'search_index.json';
+      jQuery.getJSON(search_index, go_data);
+
+      function go_data(adata) {
+        $('#search_box2').autocomplete(adata, {
+          width: 340,
+          matchContains: true,
+          formatItem: function(item) {
+            return item.text;
+          }
+        }).result(function(event, item) {
+          location.href = relpath + $(item.href_tag).attr("href");
+        });
       }
-    }).result(function(event, item) {
-      var values = item[0].split(",")
-      $('#search_box2').val(values[1]);
-      location.href = values[3];
-      return false;
     });
   </script> 
   <style> 

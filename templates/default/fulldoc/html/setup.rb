@@ -1,4 +1,5 @@
 include Helpers::ModuleHelper
+require 'json'
 
 def init
   options[:objects] = objects = run_verifier(options[:objects])
@@ -70,6 +71,7 @@ def generate_assets
   generate_class_list
   generate_file_list
   generate_frameset
+  generate_json_search_index
 end
 
 def generate_method_list
@@ -95,6 +97,38 @@ def generate_file_list
   @list_type = "files"
   asset('file_list.html', erb(:full_list))
   @file_list = nil
+end
+
+def generate_json_search_index
+  @search_index = []
+
+  @search_index << options[:files].map do |f|
+    {
+      :text => File.basename(f).gsub(/\.[^.]+$/, ''),
+      :href_tag => link_file(f)
+    }
+  end
+
+  @search_index << options[:objects].map do |o|
+    {
+      :text => o,
+      :href_tag => link_object(o)
+    }
+  end
+
+  method_listing = prune_method_listing(Registry.all(:method), false)
+  method_listing = method_listing.reject {|m| m.name.to_s =~ /=$/ && m.is_attribute? }
+  method_listing = method_listing.sort_by {|m| m.name.to_s }
+  @search_index << method_listing.map do |m|
+    {
+      :text => m,
+      :href_tag => linkify(m,m.name(true))
+    }
+  end
+
+  @search_index.flatten!
+  @json_search_index = JSON.dump(@search_index)
+  asset('search_index.json', erb(:json_search_index))
 end
 
 def generate_frameset
