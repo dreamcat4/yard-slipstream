@@ -1,9 +1,11 @@
 <div id="search2">
   <% @yardoc_org = "http://yardoc.org" %>
   <% @project = "yard" %>
-  <form class="search2" onsubmit="return false;" action="">
-    <input name="q" type="search" placeholder="Search" id="search_box2" size="30" value="" />
-  </form> 
+  <div class="search2_center">
+    <form class="search2" onsubmit="return false;" action="">
+      <input name="q" type="search" placeholder="Search" id="search_box2" size="30" value="" />
+    </form>
+  </div>
   <script type="text/javascript" charset="utf-8"> 
     $('#search_box2').focus(function(){
       var search_index = relpath + 'search_index.json';
@@ -11,7 +13,7 @@
 
       function go_data(adata) {
         $('#search_box2').autocomplete(adata, {
-          width: 305,
+          width: 300,
           matchContains: true,
           formatItem: function(item) {
             return item.text;
@@ -22,10 +24,4 @@
       }
     });
   </script> 
-  <style> 
-    .frames form.search2 { position: absolute; right: 14px; top: -6px; padding-top: 10px; }
-    .frames #menu .noframes { float: none; }
-    .frames #menu { float: left; }
-    .frames #content h1 { margin-top: 15px; }
-  </style> 
 </div>
