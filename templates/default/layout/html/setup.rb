@@ -10,7 +10,7 @@ def init
     sections :layout, [:diskfile]
   elsif object
     case object
-    when '_index.html'
+    when 'object_index.html'
       @page_title = options[:title]
       sections :layout, [:index]
     when CodeObjects::Base

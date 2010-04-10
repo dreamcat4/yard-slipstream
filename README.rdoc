@@ -21,6 +21,8 @@ Then just generate with yard as per the nomal process. Use jeweler, its good for
 * Neat blue Search box as per yardoc.org, placed top-right (not quite working, as of 05-Apr-2010)
 * The blue search box entirely replaces the 3 previous drop-down menus (Files List, Methods List, Class List), remember those?
 * New search backend engine to power the search box (again, sorry but not finished yet)
+* '_index.html' renamed to 'object_index.html' to avoid conflicts with jekyll / gh-pages
+* The above fix makes yard nestable within a gh-pages / jekyll website
 * Better scrolling to the embedded pages links (yard issue-102)
 * Some page sections removed, or re-worked, less duplication of info
 * Some object and class links and object includes emphasized for better prominence

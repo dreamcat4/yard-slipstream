@@ -7,7 +7,7 @@ def init
   options[:title] ||= "Documentation by YARD #{YARD::VERSION}"
   
   generate_assets
-  serialize('_index.html')
+  serialize('object_index.html')
   options[:files].each_with_index do |file, i| 
     serialize_file(file, i == 0 ? options[:title] : nil) 
   end
@@ -28,7 +28,7 @@ end
 
 def serialize(object)
   options[:object] = object
-  serialize_index(options) if object == '_index.html' && options[:files].empty?
+  serialize_index(options) if object == 'object_index.html' && options[:files].empty?
   Templates::Engine.with_serializer(object, options[:serializer]) do
     T('layout').run(options)
   end
