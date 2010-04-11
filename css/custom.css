@@ -67,9 +67,9 @@ form.search input { margin-left: 5px; width: 250px; border: 1px solid #99f; -moz
 
 #menu .noframes { margin-right: 355px; float: right; width: 130px; text-align: right; }
 
-/*#menu  a.link_disabled:link { color: inherit; font-size:20;}*/
-/*#menu  a.link_disabled:visited { color: inherit; font-size:20;}*/
-#menu  a.link_disabled:hover { color: inherit; font-size:20;}
+/*#menu  a.link_disabled:link { color: inherit; }*/
+/*#menu  a.link_disabled:visited { color: inherit; }*/
+#menu  a.link_disabled:hover { color: inherit; }
 
 #search2 { float: right; z-index: 1; }
 #search2 { position: absolute; right: 0px; top: 0px; }
