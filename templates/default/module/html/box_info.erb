@@ -1,22 +1,6 @@
 <% n = 1 %>
 <div id="info_box">
   <dl class="box">
-    <!-- <% if CodeObjects::ClassObject === object && object.superclass %>
-      <dt class="r<%=n%>">Inherits:</dt>
-      <dd class="r<%=n%>">
-        <span class="inheritName"><%= linkify object.superclass %></span>
-        <% if object.superclass.name != :BasicObject %>
-          <ul class="fullTree">
-            <li><%= linkify P(:Object) %></li>
-            <% object.inheritance_tree.reverse.each_with_index do |obj, i| %>
-              <li class="next"><%= obj == object ? obj.path : linkify(obj) %></li>
-            <% end %>
-          </ul>
-          <a href="#" class="inheritanceTree">show all</a>
-        <% end %>
-        </dd>
-      <% n = 2 %>
-    <% end %> -->
     <% [[:class, "Extends"], [:instance, "Includes"]].each do |scope, name| %>
       <% if (mix = object.mixins(scope)).size > 0 %>
         <dt class="r<%=n%>"><%= name %>:</dt>
