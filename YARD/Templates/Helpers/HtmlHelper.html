@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Module: YARD::Templates::Helpers::HtmlHelper</title>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../../css/custom.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../../..';
+  if (relpath != '') relpath += '/';
+</script>
+<base id="base_target" target="_top" />
+<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/live.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+		
+			<a href="object_index.html" target="main" title="Index (H)">Index (H)</a>
+		 &raquo;
+    <span class='title'><a href="../../../YARD.html" target="main" title="YARD (module)">YARD</a></span> &raquo; <span class='title'><a href="../../Templates.html" target="main" title="YARD::Templates (module)">Templates</a></span> &raquo; <span class='title'><a href="../Helpers.html" target="main" title="YARD::Templates::Helpers (module)">Helpers</a></span>
+     &raquo; 
+    <span class="title">HtmlHelper</span>
+  
+  
+  <div class="noframes">
+    <span class="title"></span>
+    <a id="frames_link" class="link_disabled">Frames</a> | 
+    <a target="_top" id="noframes_link" class="link_disabled">No Frames</a>
+    <span class="title"></span>
+  </div>
+</div>
+
+      <div id="search2">
+  
+  
+  <div class="search2_center">
+    <form class="search2" onsubmit="return false;" action="">
+      <input name="q" type="search" placeholder="Search" id="search_box2" size="30" value="" />
+    </form>
+  </div>
+  <script type="text/javascript" charset="utf-8"> 
+    $('#search_box2').focus(function(){
+      var search_index = relpath + 'search_index.json';
+      jQuery.getJSON(search_index, go_data);
+
+      function go_data(adata) {
+        $('#search_box2').autocomplete(adata, {
+          width: 300,
+          matchContains: true,
+          formatItem: function(item) {
+            return item.text;
+          }
+        }).result(function(event, item) {
+          location.href = relpath + $(item.href_tag).attr("href");
+        });
+      }
+    });
+  </script> 
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: YARD::Templates::Helpers::HtmlHelper 
+  
+  
+</h1>
+
+<div id="info_box">
+  <dl class="box">
+    
+      
+    
+      
+    
+  
+    <dt class="r1 last">Defined in:</dt>
+		<dd class="r1 last">
+  		
+  lib/yard-slipstream.rb<span class="defines">,<br /></span>
+
+
+		</dd>
+  </dl>
+</div>
+<div class="clear"></div>
+
+
+	<h3 class="inherited">Instance Methods</h3>
+	    <ul id="methods_ribbon">
+	    
+	    
+	      <li class="r1"><a href="#link_url-instance_method" target="main" title="YARD::Templates::Helpers::HtmlHelper#link_url (method)">link_url</a></li>
+	      
+	    
+	    </ul>
+
+
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first" id="link_url-instance_method">
+  <p class="signature first"">
+  
+    - (<tt>Object</tt>) <strong>link_url</strong>(url, title = nil, params = {}) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard-slipstream.rb', line 12</span>
+
+<span class='def def kw'>def</span> <span class='link_url identifier id'>link_url</span><span class='lparen token'>(</span><span class='url identifier id'>url</span><span class='comma token'>,</span> <span class='title identifier id'>title</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='SymbolHash constant id'>SymbolHash</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='false false kw'>false</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span>
+    <span class='symbol val'>:href</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='url identifier id'>url</span><span class='comma token'>,</span>
+    <span class='symbol val'>:title</span>  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='h identifier id'>h</span><span class='lparen token'>(</span><span class='title identifier id'>title</span> <span class='orop op'>||</span> <span class='url identifier id'>url</span><span class='rparen token'>)</span><span class='comma token'>,</span>
+    <span class='symbol val'>:target</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;_self&quot;</span>
+  <span class='rparen token'>)</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='dstring node'>&quot;&lt;a #{tag_attrs(params)}&gt;#{title}&lt;/a&gt;&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sun Apr 11 16:21:29 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.4  and the 
+  <a href="http://github.com/dreamcat4/yard-slipstream">yard-slipstream</a> plugin
+	(ruby-1.8.7).
+</div>
+
+  </body>
+</html>
