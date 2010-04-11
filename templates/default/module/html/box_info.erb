@@ -13,10 +13,10 @@
     <dd class="r<%=n%>"><%= mixed_into.sort_by {|o| o.path }.map {|o| linkify(o) }.join(", ") %></dd>
     <% n = n == 2 ? 1 : 2 %>
   <% end %>
-    <% unless object.root? %>
-      <dt class="r<%=n%> last">Defined in:</dt>
-      <dd class="r<%=n%> last"><%= erb(:defines) %></dd>
-    <% end %>
+    <dt class="r<%=n%> last">Defined in:</dt>
+		<dd class="r<%=n%> last">
+  		<%= erb(:defines) %>
+		</dd>
   </dl>
 </div>
 <div class="clear"></div>

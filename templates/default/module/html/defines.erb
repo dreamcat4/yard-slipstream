@@ -1,3 +1,8 @@
-<%= object.file %><% if object.files.size > 1 %><span class="defines">,<br />
-  <%= object.files[1..-1].map {|f| f.first }.join(",<br /> ") %></span>
+<% if object.root? %>
+		<%= child_files[0].first %><% if child_files.size > 1 %><span class="defines">,<br />
+		<%= child_files[1..-1].map {|f| f.first }.join(",<br /> ") %></span><% end %>
+<% else %>
+  <%= object.file %><% if object.files.size > 1 %><span class="defines">,<br />
+    <%= object.files[1..-1].map {|f| f.first }.join(",<br /> ") %></span>
+  <% else %><span class="defines">,<br /></span><% end %>
 <% end %>

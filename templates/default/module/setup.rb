@@ -16,6 +16,24 @@ def init
     :method_details_list, [T('method_details')]
 end
 
+def uniq_by(array, &blk)
+  require 'set'
+  result = []
+  values = Set.new
+  array.each do |elem|
+    value = yield elem
+    unless values.include? value
+      values << value
+      result << elem
+    end
+  end
+  result
+end
+
+def child_files
+  @child_files ||= uniq_by(object.children.map { |child| child.files }.flatten(1)) {|f| f.first}
+end
+
 def localmethods(include_specials = true)
   method_listing(include_specials)
 end
