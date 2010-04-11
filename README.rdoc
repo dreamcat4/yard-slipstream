@@ -23,19 +23,26 @@ http://dreamcat4.github.com/plist4r/
 * Blue search box to replace 3 seperate drop-down menus (Files List, Methods List, Class List)
 * The blue Search box is similar as per yardoc.org, but positioned in top-right corner
 * New backend to power the search box (loads onfocus a local json file 'search_index.json')
+* Best as-can-be-done html frames support
 * New Frames | No Frames hyperlinks bar. Top right, next to search.
-* '_index.html' renamed to 'object_index.html' to avoid conflicts with jekyll / gh-pages
+* Internal links stay in frames. External page links break out of frames.
+* '_index.html' renamed to 'object_index.html'. To avoid conflicts with jekyll / gh-pages
 * The above fix allows yard docs to be nestable within gh-pages / jekyll website
 * Better scrolling to embedded page links (yard issue-102)
 * Certain object navigation links emphasized (easier to click on / better prominence)
 * More rdoc-like method navigation (via the method ribbons)
 * A couple of sections re-ordered to work better in the new layout
+* Enables the info box for Top Level Namespace
 
 == Whats left the same?
 
 * Same basic fundamental layout. Which was already good to begin with.
 * Well, all of the other best aspects / detail from the original yard template. (We hope!)
-* We havent unintentionally broken anything from yard 0.5.4. We promise.
+* We havent intentionally broken any features of yard. We promise.
+
+== Browser Compatability
+
+Developed on Firfox and Safari. AFAIK Chrome and any other WebKit based browsers should be fine. Opera was not tested particularly thoroughly. This plugin isnt tested on IE (any version). Internet Explorer will probably show some inconsistencies, given how poorly it supports CSS. If anyone would like to contribute compatability fixes for either Opera or IE, please do so. You are more than welcome. Also please note that by adding new features, future compatablility may suffer.
 
 == Future compatibility / Support
  
