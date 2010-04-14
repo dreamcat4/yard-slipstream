@@ -40,6 +40,13 @@ http://dreamcat4.github.com/plist4r/
 * Well, all of the other best aspects / detail from the original yard template. (We hope!)
 * We havent intentionally broken any features of yard. We promise.
 
+== Known issues
+
+These problems should be fixed in the next release
+
+* Search results url dont work in Frames mode
+* Info box features Less / More button when only 1 File Defined in the info box
+
 == Browser Compatability
 
 Developed on Firfox and Safari. AFAIK Chrome and any other WebKit based browsers should be fine. Opera was not tested particularly thoroughly. This plugin isnt tested on IE (any version). Internet Explorer will probably show some inconsistencies, given how poorly it supports CSS. If anyone would like to contribute compatability fixes for either Opera or IE, please do so. You are more than welcome. Also please note that by adding new features, future compatablility may suffer.
