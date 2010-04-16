@@ -28,7 +28,7 @@
       <div id="menu">
   
 		
-			<a href="object_index.html" target="main" title="Index">Index</a>
+			<a href="object_index.html" target="_self" title="Index">Index</a>
 		 &raquo;
     
     
@@ -64,7 +64,11 @@
             return item.text;
           }
         }).result(function(event, item) {
-          location.href = relpath + $(item.href_tag).attr("href");
+					if (window.location.search) {
+	          window.location.href = relpath + $(item.href_tag).attr("href");
+					} else {
+	          location.href = relpath + $(item.href_tag).attr("href");
+					}
         });
       }
     });
@@ -107,7 +111,7 @@
 	    <ul id="modules_ribbon">
 	    
 	    
-	      <li class="r1"><a href="YARD.html" target="main" title="YARD (module)">YARD</a></li>
+	      <li class="r1"><a href="YARD.html" target="_self" title="YARD (module)">YARD</a></li>
 	      
 	    
 	    </ul>
@@ -124,7 +128,7 @@
 </div>
     
     <div id="footer">
-  Generated on Sun Apr 11 16:39:36 2010 by 
+  Generated on Fri Apr 16 16:24:57 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.4  and the 
   <a href="http://github.com/dreamcat4/yard-slipstream">yard-slipstream</a> plugin
