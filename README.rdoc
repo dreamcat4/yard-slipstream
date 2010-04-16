@@ -6,7 +6,7 @@ So go on, lets give yard a styleover.
 
 == Demo
 
-http://dreamcat4.github.com/plist4r/
+http://dreamcat4.github.com/plist4r
 
 == Usage
 
@@ -39,13 +39,6 @@ http://dreamcat4.github.com/plist4r/
 * Same basic fundamental layout. Which was already good to begin with.
 * Well, all of the other best aspects / detail from the original yard template. (We hope!)
 * We havent intentionally broken any features of yard. We promise.
-
-== Known issues
-
-These problems should be fixed in the next release
-
-* Search results url dont work in Frames mode
-* Info box features Less / More button when only 1 File Defined in the info box
 
 == Browser Compatability
 
