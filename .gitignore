@@ -16,7 +16,7 @@ tmtags
 ## PROJECT::GENERAL
 coverage
 rdoc
-doc/
+doc
 .yardoc
 pkg
 
