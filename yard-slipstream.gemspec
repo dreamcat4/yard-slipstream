@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{yard-slipstream}
-  s.version = "0.1.10"
+  s.version = "0.1.11"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dreamcat4"]
-  s.date = %q{2010-04-17}
+  s.date = %q{2010-04-18}
   s.description = %q{yard-slipstream is a yard plugin for Yard-0.5.3 and higher. Slipstream gives users an option for faster page navigation in their yard documents. We just want to optimize the most frequent lookups and remove any duplicate info. Other than that its just plain straight Yard, with all the same "look and feel" as the default template.}
   s.email = %q{dreamcat4@gmail.com}
   s.extra_rdoc_files = [
