@@ -1,7 +1,7 @@
 <% n = 1 %>
 <div id="info_box">
   <dl class="box">
-    <% [[:class, "Extends"], [:instance, "Includes"]].each do |scope, name| %>
+    <% [[:class, "Extended by"], [:instance, "Includes"]].each do |scope, name| %>
       <% if (mix = object.mixins(scope)).size > 0 %>
         <dt class="r<%=n%>"><%= name %>:</dt>
         <dd class="r<%=n%>"><%= mix.sort_by {|o| o.path }.map {|o| linkify(o) }.join(", ") %></dd>
